@@ -1,6 +1,7 @@
 let timer;
 let isRunning = false;
-let timeLeft = 25 * 60; // 25 minutos en segundos
+//let timeLeft = 25 * 60; // 25 minutos en segundos
+timeLeft = 30;
 let isWorkTime = true; // Inicia con el tiempo de trabajo
 
 const startPauseButton = document.getElementById('startPause');
@@ -44,7 +45,8 @@ function updateTimer() {
 // Reiniciar el temporizador
 function resetTimer() {
   clearInterval(timer);
-  timeLeft = 25 * 60;
+ // timeLeft = 25 * 60;
+  timeLeft = 30;
   timeDisplay.textContent = formatTime(timeLeft);
   startPauseButton.textContent = "Iniciar";
   isRunning = false;
