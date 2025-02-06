@@ -52,4 +52,3 @@ function resetTimer() {
 
 startPauseButton.addEventListener('click', toggleTimer);
 resetButton.addEventListener('click', resetTimer);
-
