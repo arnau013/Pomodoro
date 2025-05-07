@@ -1,6 +1,6 @@
 let timer;
 let isRunning = false;
-let timeLeft = 30; // 30 segundos de trabajo
+let timeLeft = 1800; // 30 segundos de trabajo
 let isWorkTime = true; // Inicia con el tiempo de trabajo
 
 const startPauseButton = document.getElementById('startPause');
@@ -35,7 +35,7 @@ function updateTimer() {
     clearInterval(timer);
     alert(isWorkTime ? "¡Tiempo de descanso!" : "¡Hora de trabajar!");
     isWorkTime = !isWorkTime; // Cambia entre trabajo y descanso
-    timeLeft = isWorkTime ? 30 : 10; // 30 segundos de trabajo, 10 segundos de descanso
+    timeLeft = isWorkTime ? 1800 : 300; // 30 segundos de trabajo, 10 segundos de descanso
     startPauseButton.textContent = "Iniciar";
     isRunning = false;
   }
@@ -44,7 +44,7 @@ function updateTimer() {
 // Reiniciar el temporizador
 function resetTimer() {
   clearInterval(timer);
-  timeLeft = 30; // Comienza nuevamente con 30 segundos de trabajo
+  timeLeft = 1800; // Comienza nuevamente con 30 segundos de trabajo
   timeDisplay.textContent = formatTime(timeLeft);
   startPauseButton.textContent = "Iniciar";
   isRunning = false;
